@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "../goal";
+
+message Name{
+    string first    = 1;
+    string last     = 2;
+}
+
+message WelcomeMessage{
+    string result   = 1;
+}
+
+service SelfService {
+    rpc Welcome(Name) returns (WelcomeMessage);
+}
