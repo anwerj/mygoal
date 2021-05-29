@@ -36,7 +36,7 @@ func main() {
 		ctx.JSON(http.StatusInternalServerError, gin.H{"error": fmt.Sprint(err)})
 	})
 
-	if err := g.Run(":4041"); err != nil {
+	if err := g.Run("localhost:4041"); err != nil {
 		log.Fatalf("Failed to start the client server: %v", err)
 	}
 }

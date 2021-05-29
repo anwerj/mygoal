@@ -15,7 +15,7 @@ type server struct{}
 func main() {
 	fmt.Println("Hi, I am set")
 
-	listener, err := net.Listen("tcp", ":4040")
+	listener, err := net.Listen("tcp", "localhost:4040")
 	if err != nil {
 		panic(err)
 	}
